@@ -20,14 +20,7 @@ public class PeopleController : ControllerBase
     [HttpGet(Name = "GetPeople")]
     public async Task<IEnumerable<Person>> Get()
     {
-         /*var mock = new List<Person>
-         {
-             new Person(firstName: "Janek", lastName: "Nowak", phoneNumber: "123321123"),
-             new Person(firstName: "Marek", lastName: "Kowalski")
-         };*/
-
         var people = await db.People.ToListAsync();
         return people;
-        //return mock;
     }
 }
