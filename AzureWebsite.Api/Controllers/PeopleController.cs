@@ -22,7 +22,7 @@ public class PeopleController : ControllerBase
     {
          var mock = new List<Person>
          {
-             new Person(firstName: "Jan", lastName: "Nowak", phoneNumber: "123321123"),
+             new Person(firstName: "Janek", lastName: "Nowak", phoneNumber: "123321123"),
              new Person(firstName: "Marek", lastName: "Kowalski")
          };
 
