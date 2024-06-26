@@ -11,9 +11,9 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AzureWebsite.Api.Migrations
 {
-    [DbContext(typeof(PeopleDb))]
-    [Migration("20230111111250_InitMigration")]
-    partial class InitMigration
+    [DbContext(typeof(AOrtmanDB))]
+    [Migration("20240626203611_InitMigrationAgain")]
+    partial class InitMigrationAgain
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AzureWebsite.Api.Migrations
 {
-    [DbContext(typeof(PeopleDb))]
+    [DbContext(typeof(AOrtmanDB))]
     partial class PeopleDbModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

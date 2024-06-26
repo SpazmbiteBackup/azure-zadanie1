@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
@@ -6,17 +7,18 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace AzureWebsite.Api.Migrations
 {
     /// <inheritdoc />
-    public partial class InitMigration : Migration
+    public partial class InitMigrationAgain : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            //migrationBuilder.CreateTable
             migrationBuilder.CreateTable(
                 name: "Person",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    .Annotation("SqlServer:Identity","1,1"),
                     FirstName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: true),
                     CreatedOn = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -25,14 +27,16 @@ namespace AzureWebsite.Api.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Person", x => x.Id);
-                });
+                }
+            );
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Person");
+                name: "Person"
+            );
         }
     }
 }

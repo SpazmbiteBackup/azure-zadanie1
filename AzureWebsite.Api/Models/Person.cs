@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+
 namespace AzureWebsite.Api.Models
 {
     public class Person
@@ -15,8 +17,8 @@ namespace AzureWebsite.Api.Models
         }
 
         public int Id { get; protected set; }
-        public string FirstName { get; protected set; }
-        public string LastName { get; protected set; }
+        public string? FirstName { get; protected set; }
+        public string? LastName { get; protected set; }
         public DateTime CreatedOn { get; protected set; }
         public string? PhoneNumber { get; protected set; }
     }

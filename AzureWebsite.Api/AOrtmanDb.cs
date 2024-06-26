@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace AzureWebsite.Api
 {
-    public class PeopleDb : DbContext
+    public class AOrtmanDB : DbContext
     {
-        public PeopleDb(DbContextOptions<PeopleDb> options) : base(options)
+        public AOrtmanDB(DbContextOptions<AOrtmanDB> options) : base(options)
         {
         }
 
